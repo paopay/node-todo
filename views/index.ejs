@@ -7,5 +7,24 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form action="new" method="post">
+      <input type="text" class="newTodo" name="description"></input>
+      <button class="todoButton">Click Me!</button>
+    </form>
+      
+    </input>
+
+    <% items.forEach(function(item){ %>
+    <p>
+      <%= item.description %>
+      <form action="delete/<%= item.description %>" method="post">
+        <button>x</button>
+      </form>
+    </p>
+    <% }) %>
+
+    <script type="text/javascript" src='javascripts/client.js'>
+
+    </script>
   </body>
 </html>
